@@ -1,6 +1,7 @@
 //Init an empty array element called tasks
 let tasks = []
 
+
 //Add on ON CLICK event listener to the "add task button" that calls a function
 document.getElementById('addTaskBtn').addEventListener('click', function () {
     //Get the value of the input box and store it in a variable called task input
@@ -45,6 +46,7 @@ function displayTasks() {
 
 }
 
+updateTaskCounter(); // Update task counter after displaying tasks (NEW FEATURE)
 
 //remove task from list when check button is clicked 
 function removeTask(index){
@@ -62,3 +64,11 @@ tasks = []
 //call the function to update task list display
 displayTasks()
 })
+
+// Allow pressing Enter (⏎) to add a task (NEW FEATURE)
+document.getElementById('taskInput').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        document.getElementById('addTaskBtn').click();
+    }
+});
+
