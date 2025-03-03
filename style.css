@@ -8,6 +8,10 @@ h1 {
     font-weight: bold;
 }
 
+body {
+    background-color: rgb(36, 234, 141) !important;
+}
+
 .container {
     background: white;
     padding: 20px;
